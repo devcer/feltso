@@ -2,37 +2,129 @@
 <html>
 <head>
 	<title>Felso</title>
-	<link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
+<body ng-app="feltSo" ng-controller="feltSoCtrl">
 <!-- header -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">Feltso</span>
+      <span class="mdl-layout-title">FELTSO</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        
+        <i class="material-icons md-inverse">account_circle</i>
       </nav>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#scroll-tab-1" class="mdl-layout__tab is-active">CONNECTORS</a>
+      <a href="#scroll-tab-2" class="mdl-layout__tab">KNOW YOUR AUDIENCE</a>
+      <a href="#scroll-tab-3" class="mdl-layout__tab">TOPIC SEARCH</a>
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
+    <span class="mdl-layout-title"></span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
+      
     </nav>
   </div>
   <main class="mdl-layout__content">
-    <div class="page-content"><!-- Your content goes here --></div>
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+      <div class="page-content">
+      <!-- Your content goes here -->
+      	<div class="mdl-grid">
+      		<div class="mdl-cell mdl-cell--12-col">{{firstName}}</div>
+      	</div>
+      	<div class="mdl-grid">
+      		<div class="mdl-cell mdl-cell--6-col"></div>
+      		<div class="mdl-cell mdl-cell--6-col"></div>
+      	</div>
+      	<div class="mdl-grid">
+      		<div class="mdl-cell mdl-cell--6-col">
+      			<div class="mdl-grid">
+      				<div class="mdl-cell mdl-cell--12-col">	
+  					Top Positive Posts
+  					</div>
+  					<div ng-repeat="x in top_pos_posts">
+  					<div class="mdl-cell mdl-cell--12-col">	
+  						{{x.message}}
+  					</div>
+  					</div>
+				</div>
+      		</div>
+      		<div class="mdl-cell mdl-cell--6-col">
+      			<div class="mdl-grid">
+      				<div class="mdl-cell mdl-cell--12-col">	
+  					Top Negative Posts
+  					</div>
+  					<div ng-repeat="x in top_neg_posts">
+  					<div class="mdl-cell mdl-cell--12-col">	
+  						{{x.message}}
+  					</div>
+  					</div>
+				</div>
+      		</div>
+      	</div>
+      	<div class="mdl-grid">
+      		<div class="mdl-cell mdl-cell--6-col">
+      			<div class="mdl-grid">
+      				<div class="mdl-cell mdl-cell--12-col">	
+  					Top Positive Comments
+  					</div>
+  					<div ng-repeat="x in top_pos_comments">
+  					<div class="mdl-cell mdl-cell--12-col">	
+  						{{x.text}}
+  					</div>
+  					</div>
+				</div>
+      		</div>
+      		<div class="mdl-cell mdl-cell--6-col">
+      			<div class="mdl-grid">
+      				<div class="mdl-cell mdl-cell--12-col">	
+  					Top Negative Comments
+  					</div>
+  					<div ng-repeat="x in top_neg_comments">
+  					<div class="mdl-cell mdl-cell--12-col">	
+  						{{x.text}}
+  					</div>
+  					</div>
+				</div>
+      		</div>
+      	</div>
+      	<div class="mdl-grid">
+      		<div class="mdl-cell mdl-cell--6-col"></div>
+      		<div class="mdl-cell mdl-cell--6-col"></div>
+      	</div>
+      	<div class="mdl-grid">
+      		<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone">
+      			<div class="mdl-grid">
+      				<div class="mdl-cell mdl-cell--12-col">	
+  					Top Evangelists
+  					</div>
+  					<div ng-repeat="x in top_pos_comments">
+  					<div class="mdl-cell mdl-cell--12-col">	
+  						{{x.text}}
+  					</div>
+  					</div>
+				</div>
+      		</div>
+      		<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone"></div>
+      		<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone"></div>
+      		<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone"></div>
+      	</div>
+      </div>
+    </section>
   </main>
 </div>
-<script src="./node_modules/material-design-lite/material.min.js"></script>
+<!-- content -->
+
+
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
 </body>
 </html>

@@ -4,7 +4,9 @@
   "description": "This site can be found at https://viswanathamsantosh.github.io/feltso/",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "budo --live --verbose --port 4030 --open",
+    "deploy": "master"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   },
   "homepage": "https://github.com/viswanathamsantosh/feltso#readme",
   "dependencies": {
-    "material-design-lite": "^1.3.0"
+    "material-design-lite": "^1.3.0",
+    "budo": "^7.0.0"
   }
 }

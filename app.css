@@ -1,0 +1,20 @@
+.percentage{
+	margin-top: 25%;
+	text-align: center;
+}
+.color-green{
+	color: green;
+}
+.color-red{
+	color: red;
+}
+.green-up-arrow, .red-down-arrow{
+	margin-top: 25%;
+	font-size: 55px;
+}
+.download-button{
+	width: 35px;
+	height: 35px;
+	min-width: 35px;
+	margin-top: 12px;
+}

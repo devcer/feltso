@@ -1,5 +1,5 @@
 .percentage{
-	margin-top: 25%;
+	
 	text-align: center;
 }
 .color-green{
@@ -8,13 +8,44 @@
 .color-red{
 	color: red;
 }
-.green-up-arrow, .red-down-arrow{
-	margin-top: 25%;
-	font-size: 55px;
+.md-36{
+	font-size: 36px;
 }
 .download-button{
 	width: 35px;
 	height: 35px;
 	min-width: 35px;
 	margin-top: 12px;
+}
+.grey-bottom-border{
+	border-bottom: 1px solid #e5e5e5; 
+}
+.grey-border{
+	border: 1px solid #e5e5e5;
+}
+.no-margin{
+	margin: 0px !important;
+}
+.no-padding{
+	padding: 0px !important;
+}
+.no-margin-right{
+	margin-right: 0px !important; 
+}
+.no-margin-left{
+	margin-left: 0px !important;
+}
+.grey-border-right{
+	border-right: 1px solid #e3e3e3; 
+}
+p{
+	margin: 0px !important; 
+}
+.center-align-everything{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.select-width{
+	width: 145px !important;
 }

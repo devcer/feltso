@@ -14,7 +14,9 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title"><strong><i> FELTSO</i></strong></span>
+      <span class="mdl-layout-title"><strong><i> FELTSO</i></strong>
+      <img src="img/feltso.png" width="35px">
+      </span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
@@ -36,7 +38,7 @@
     </nav>
   </div>
   <main class="mdl-layout__content mdl-color--grey-100">
-    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
       <div class="page-content">
       <!-- Your content goes here -->
       	<div class="mdl-grid">
@@ -47,14 +49,14 @@
                 <a href="#lannisters-panel" class="mdl-tabs__tab">DETAILED ANALYSIS</a>
               </div>
               <div class="mdl-tabs__panel is-active" id="starks-panel">
-                <div class="mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col">
+                <div class="mdl-grid grey-bottom-border center-align-everything mdl-grid--no-spacing">
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
                     <span class="mdl-chip mdl-chip--contact mdl-chip--deletable">
-                      <img class="mdl-chip__contact" src="img/user.jpg"></img>
+                      <img class="mdl-chip__contact" src="img/facebook.png"></img>
                       <span class="mdl-chip__text">Username</span>
                     </span>
                   </div>
-                  <div class="mdl-cell mdl-cell--2-col">
+                  <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-phone">
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
                       <input class="mdl-textfield__input" value="28" id="days" type="text" readonly tabIndex="-1"/>
                       <label for="days">
@@ -67,8 +69,8 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="mdl-cell mdl-cell--2-col">
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                  <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-phone">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select select-width">
                       <input class="mdl-textfield__input" value="All" id="sourcewise" type="text" readonly tabIndex="-1"/>
                       <label for="sourcewise">
                         <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
@@ -80,7 +82,7 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="mdl-cell mdl-cell--2-col">
+                  <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                     <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
                       <i class="material-icons">file_download</i>
                     </button>
@@ -94,202 +96,199 @@
                   
                   </div>
                 </div>
-                <div class="mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col">
-                    <div class="mdl-grid">
+                <div class="mdl-grid grey-border no-padding mdl-grid--no-spacing">
+                  <div class="mdl-cell mdl-cell--6-col no-margin grey-border-right">
+                    <div class="mdl-grid grey-bottom-border no-padding">
                       <div class="mdl-cell mdl-cell--12-col"> 
                        <p><strong>Top Positive Posts</strong></p>
-                       <i class="material-icons">info_outline</i>
+                       <!--<i class="material-icons">info_outline</i> -->
                       </div>
                     </div>
                     <div class="top-post-div" ng-repeat="x in top_pos_posts">
-                      <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--7-col">  
+                      <div class="mdl-grid grey-bottom-border no-padding center-align-everything">
+                        <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-phone grey-border-right">  
                           <p>{{x.message}}</p>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">  
-                          <p class="percentage">{{x.percentage}}</p>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-phone">  
+                          <p class="percentage">{{x.percentage+"%"}}</p>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">  
-                          <i class="material-icons color-green green-up-arrow">arrow_drop_up</i>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-phone">  
+                          <i class="material-icons color-green md-36">arrow_drop_up</i>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="mdl-cell mdl-cell--6-col">
-                    <div class="mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col no-margin">
+                    <div class="mdl-grid grey-bottom-border no-padding">
                       <div class="mdl-cell mdl-cell--12-col"> 
                         <p><strong>Top Negative Posts</strong></p>
                       </div>
                     </div>
                     <div ng-repeat="x in top_neg_posts">
-                      <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--7-col">  
+                      <div class="mdl-grid grey-bottom-border no-padding center-align-everything">
+                        <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-phone grey-border-right">  
                           <p>{{x.message}}</p>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">  
-                            <p class="percentage">{{x.percentage}}</p>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-phone">  
+                            <p class="percentage">{{x.percentage + "%"}}</p>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">  
-                            <i class="material-icons color-red red-down-arrow">arrow_drop_down</i>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-phone">  
+                            <i class="material-icons color-red md-36">arrow_drop_down</i>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col">
-                    <div class="mdl-grid">
+                <div class="mdl-grid grey-border no-padding mdl-grid--no-spacing">
+                  <div class="mdl-cell mdl-cell--6-col no-margin grey-border-right">
+                    <div class="mdl-grid grey-bottom-border no-padding">
                       <div class="mdl-cell mdl-cell--12-col"> 
                         <p><strong>Top Positive Comments</strong></p>
                       </div>
                     </div>
                     <div ng-repeat="x in top_pos_comments">
-                      <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--7-col">  
+                      <div class="mdl-grid grey-bottom-border no-padding center-align-everything">
+                        <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-phone grey-border-right">  
                           <p>{{x.text}}</p>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">  
-                          <p class="percentage">{{x.score*100}}</p>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-phone">  
+                          <p class="percentage">{{x.score*100 + "%"}}</p>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">  
-                          <i class="material-icons color-green green-up-arrow">arrow_drop_up</i>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-phone">  
+                          <i class="material-icons color-green md-36">arrow_drop_up</i>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="mdl-cell mdl-cell--6-col">
-                    <div class="mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col no-margin">
+                    <div class="mdl-grid grey-bottom-border no-padding">
                       <div class="mdl-cell mdl-cell--12-col"> 
                         <p><strong>Top Negative Comments</strong></p>
                       </div>
                     </div>
                     <div ng-repeat="x in top_neg_comments">
-                      <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--7-col">  
+                      <div class="mdl-grid grey-bottom-border no-padding center-align-everything">
+                        <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-phone  grey-border-right">  
                           <p>{{x.text}}</p>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">  
-                          <p class="percentage">{{x.score*100}}</p>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-phone">  
+                          <p class="percentage">{{x.score*100+"%"}}</p>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">  
-                          <i class="material-icons color-red red-down-arrow">arrow_drop_down</i>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-phone">  
+                          <i class="material-icons color-red md-36">arrow_drop_down</i>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone">
-            <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--12-col"> 
-                <p><strong>Top Evangelists</strong></p>
-              </div>
-            </div>
-            <div ng-repeat="x in top_pos_comments">
-            <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--8-col">
-                <span class="mdl-chip mdl-chip--contact">
-                  <img class="mdl-chip__contact" src="img/user.jpg"/>
-                  <span class="mdl-chip__text">{{x.user_info.name}}</span>
-                </span> 
-              </div>
-              <div class="mdl-cell mdl-cell--2-col">  
-                <p>{{x.score*100+"%"}}</p>
-              </div>
-              <div class="mdl-cell mdl-cell--2-col">  
-                <i class="material-icons color-green green-up-arrow">arrow_drop_up</i>
-              </div>
-            </div>
-            </div>
-          </div>
-          <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone">
-            <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--12-col"> 
-                <p><strong>Top Critics</strong></p>
-              </div>
-            </div>
-            <div ng-repeat="x in top_pos_comments">
-            <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--8-col">
-                <span class="mdl-chip mdl-chip--contact">
-                  <img class="mdl-chip__contact" src="img/user.jpg"/>
-                  <span class="mdl-chip__text">{{x.user_info.name}}</span>
-                </span> 
-              </div>
-              <div class="mdl-cell mdl-cell--2-col">  
-                <p>{{x.score*100+"%"}}</p>
-              </div>
-              <div class="mdl-cell mdl-cell--2-col">  
-                <i class="material-icons color-red red-down-arrow">arrow_drop_down</i>
-              </div>
-            </div>
-            </div>
-          </div>
-          <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone">
-            <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--12-col"> 
-                <p><strong>Top Positive aspects</strong></p>
-              </div>
-            </div>
-            <div ng-repeat="x in top_pos_comments">
-            <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--8-col">
-                <span class="mdl-chip mdl-chip--contact">
-                  <img class="mdl-chip__contact" src="img/user.jpg"/>
-                  <span class="mdl-chip__text">{{x.user_info.name}}</span>
-                </span> 
-              </div>
-              <div class="mdl-cell mdl-cell--2-col">  
-                <p>{{x.score*100+"%"}}</p>
-              </div>
-              <div class="mdl-cell mdl-cell--2-col">  
-                <i class="material-icons color-green green-up-arrow">arrow_drop_up</i>
-              </div>
-            </div>
-            </div>
-          </div>
-          <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone">
-            <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--12-col"> 
-                <p><strong>Top Negative Aspects</strong></p>
-                <div class="mdl-layout-spacer"></div>
-                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-  <i class="material-icons">info_outline</i>
-</button>
-              </div>
-            </div>
-            <div ng-repeat="x in top_pos_comments">
-            <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--8-col">
-                <span class="mdl-chip mdl-chip--contact">
-                  <img class="mdl-chip__contact" src="img/user.jpg"/>
-                  <span class="mdl-chip__text">{{x.user_info.name}}</span>
-                </span> 
-              </div>
-              <div class="mdl-cell mdl-cell--2-col">  
-                <p>{{x.score*100+"%"}}</p>
-              </div>
-              <div class="mdl-cell mdl-cell--2-col">  
-                <i class="material-icons color-red red-down-arrow">arrow_drop_down</i>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
+                <div class="mdl-grid grey-border no-padding mdl-grid--no-spacing">
+                  <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone no-margin grey-border-right">
+                    <div class="mdl-grid grey-bottom-border no-padding">
+                      <div class="mdl-cell mdl-cell--12-col"> 
+                        <p><strong>Top Evangelists</strong></p>
+                      </div>
+                    </div>
+                    <div ng-repeat="x in top_pos_comments">
+                      <div class="mdl-grid center-align-everything grey-bottom-border no-padding">
+                        <div class="mdl-cell mdl-cell--8-col grey-border-right mdl-cell--2-col-phone">
+                          <span class="mdl-chip mdl-chip--contact">
+                            <img class="mdl-chip__contact" src="img/user.jpg"/>
+                            <span class="mdl-chip__text">{{x.user_info.name.split(" ")[0]}}</span>
+                          </span> 
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">  
+                          <p>{{x.score*100+"%"}}</p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">  
+                          <i class="material-icons color-green md-36">arrow_drop_up</i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone no-margin grey-border-right">
+                    <div class="mdl-grid grey-bottom-border no-padding">
+                      <div class="mdl-cell mdl-cell--12-col"> 
+                        <p><strong>Top Critics</strong></p>
+                      </div>
+                    </div>
+                    <div ng-repeat="x in top_pos_comments">
+                    <div class="mdl-grid center-align-everything grey-bottom-border no-padding">
+                      <div class="mdl-cell mdl-cell--8-col grey-border-right mdl-cell--2-col-phone">
+                        <span class="mdl-chip mdl-chip--contact">
+                          <img class="mdl-chip__contact" src="img/user.jpg"/>
+                          <span class="mdl-chip__text">{{x.user_info.name.split(" ")[0]}}</span>
+                        </span> 
+                      </div>
+                      <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">  
+                        <p>{{x.score*100+"%"}}</p>
+                      </div>
+                      <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">  
+                        <i class="material-icons color-red md-36">arrow_drop_down</i>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone no-margin grey-border-right">
+                    <div class="mdl-grid grey-bottom-border no-padding">
+                      <div class="mdl-cell mdl-cell--12-col"> 
+                        <p><strong>Top Positive aspects</strong></p>
+                      </div>
+                    </div>
+                    <div ng-repeat="x in top_pos_comments">
+                    <div class="mdl-grid center-align-everything grey-bottom-border no-padding">
+                      <div class="mdl-cell mdl-cell--8-col mdl-cell--2-col-phone grey-border-right">
+                        <span class="mdl-chip mdl-chip--contact">
+                          <img class="mdl-chip__contact" src="img/user.jpg"/>
+                          <span class="mdl-chip__text">{{x.user_info.name.split(" ")[0]}}</span>
+                        </span> 
+                      </div>
+                      <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">  
+                        <p>{{x.score*100+"%"}}</p>
+                      </div>
+                      <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">  
+                        <i class="material-icons color-green md-36">arrow_drop_up</i>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone no-margin grey-border-right">
+                    <div class="mdl-grid grey-bottom-border no-padding">
+                      <div class="mdl-cell mdl-cell--12-col"> 
+                        <p><strong>Top Negative Aspects</strong></p>
+                        <div class="mdl-layout-spacer"></div>
+                      </div>
+                    </div>
+                    <div ng-repeat="x in top_pos_comments">
+                    <div class="mdl-grid center-align-everything grey-bottom-border no-padding">
+                      <div class="mdl-cell mdl-cell--8-col mdl-cell--2-col-phone grey-border-right">
+                        <span class="mdl-chip mdl-chip--contact">
+                          <img class="mdl-chip__contact" src="img/user.jpg"/>
+                          <span class="mdl-chip__text">{{x.user_info.name.split(" ")[0]}}</span>
+                        </span> 
+                      </div>
+                      <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">  
+                        <p>{{x.score*100+"%"}}</p>
+                      </div>
+                      <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">  
+                        <i class="material-icons color-red md-36">arrow_drop_down</i>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="mdl-tabs__panel" id="lannisters-panel">
               </div>
             </div>  
           </div>
       	</div>
-      	
       </div>
     </section>
-  </main>
-  <!-- <footer class="mdl-mini-footer">
+    <footer class="mdl-mini-footer">
     <div class="mdl-mini-footer__left-section">
-      <div class="mdl-logo"><strong><i> FELTSO</i></strong></div>
+      <div class="mdl-logo"><strong><i> FELTSO</i></strong>
+      <img src="img/feltso.png" width="25px">
+      </div>
       <ul class="mdl-mini-footer__link-list">
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact Us</a></li>
@@ -300,7 +299,9 @@
     <div class="mdl-mini-footer__right-section">
     &copy; FeltSo 2017
     </div>
-  </footer> -->
+  </footer>
+  </main>
+  
 </div>
 <!-- content -->
 <!-- footer -->

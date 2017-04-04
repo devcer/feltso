@@ -23,9 +23,7 @@
 .grey-border{
 	border: 1px solid #e5e5e5;
 }
-.no-margin{
-	margin: 0px !important;
-}
+
 .no-padding{
 	padding: 0px !important;
 }
@@ -48,4 +46,7 @@ p{
 }
 .select-width{
 	width: 145px !important;
+}
+.margin-left-10{
+	margin-left: 10px
 }

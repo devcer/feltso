@@ -50,3 +50,7 @@ p{
 .margin-left-10{
 	margin-left: 10px
 }
+.header-block-alignment{
+	display:flex;
+	align-items:center;
+}

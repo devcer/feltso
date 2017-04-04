@@ -98,10 +98,11 @@
                 </div>
                 <div class="mdl-grid grey-border no-padding mdl-grid--no-spacing">
                   <div class="mdl-cell mdl-cell--6-col grey-border-right">
-                    <div class="mdl-grid grey-bottom-border no-padding">
-                      <div class="mdl-cell mdl-cell--12-col"> 
-                       <p><strong>Top Positive Posts</strong></p>
-                       <!--<i class="material-icons">info_outline</i> -->
+                    <div class="mdl-grid grey-bottom-border no-padding ">
+                      <div class="mdl-cell mdl-cell--12-col header-block-alignment"> 
+                       <span><strong>Top Positive Posts</strong></span>
+                       <div class="mdl-layout-spacer"></div>
+                       <i class="material-icons">info_outline</i>
                       </div>
                     </div>
                     <div class="top-post-div" ng-repeat="x in top_pos_posts">
@@ -120,8 +121,10 @@
                   </div>
                   <div class="mdl-cell mdl-cell--6-col ">
                     <div class="mdl-grid grey-bottom-border no-padding">
-                      <div class="mdl-cell mdl-cell--12-col"> 
-                        <p><strong>Top Negative Posts</strong></p>
+                      <div class="mdl-cell mdl-cell--12-col header-block-alignment"> 
+                       <span><strong>Top Negative Posts</strong></span>
+                       <div class="mdl-layout-spacer"></div>
+                       <i class="material-icons">info_outline</i>
                       </div>
                     </div>
                     <div ng-repeat="x in top_neg_posts">
@@ -142,14 +145,16 @@
                 <div class="mdl-grid grey-border no-padding mdl-grid--no-spacing">
                   <div class="mdl-cell mdl-cell--6-col  grey-border-right">
                     <div class="mdl-grid grey-bottom-border no-padding">
-                      <div class="mdl-cell mdl-cell--12-col"> 
-                        <p><strong>Top Positive Comments</strong></p>
+                      <div class="mdl-cell mdl-cell--12-col header-block-alignment"> 
+                       <span><strong>Top Positive Comments</strong></span>
+                       <div class="mdl-layout-spacer"></div>
+                       <i class="material-icons">info_outline</i>
                       </div>
                     </div>
                     <div ng-repeat="x in top_pos_comments">
                       <div class="mdl-grid grey-bottom-border no-padding center-align-everything">
                         <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-phone grey-border-right">  
-                          <p>{{x.text}}</p>
+                          <i class="material-icons">format_quote</i><span>{{x.text}}</span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-phone">  
                           <p class="percentage">{{x.score*100 + "%"}}</p>
@@ -162,14 +167,16 @@
                   </div>
                   <div class="mdl-cell mdl-cell--6-col ">
                     <div class="mdl-grid grey-bottom-border no-padding">
-                      <div class="mdl-cell mdl-cell--12-col"> 
-                        <p><strong>Top Negative Comments</strong></p>
+                      <div class="mdl-cell mdl-cell--12-col header-block-alignment"> 
+                       <span><strong>Top Negative Comments</strong></span>
+                       <div class="mdl-layout-spacer"></div>
+                       <i class="material-icons">info_outline</i>
                       </div>
                     </div>
                     <div ng-repeat="x in top_neg_comments">
                       <div class="mdl-grid grey-bottom-border no-padding center-align-everything">
                         <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-phone  grey-border-right">  
-                          <p>{{x.text}}</p>
+                          <i class="material-icons">format_quote</i><span>{{x.text}}</span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-phone">  
                           <p class="percentage">{{x.score*100+"%"}}</p>
@@ -184,8 +191,10 @@
                 <div class="mdl-grid grey-border no-padding mdl-grid--no-spacing">
                   <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone  grey-border-right">
                     <div class="mdl-grid grey-bottom-border no-padding">
-                      <div class="mdl-cell mdl-cell--12-col"> 
-                        <p><strong>Top Evangelists</strong></p>
+                      <div class="mdl-cell mdl-cell--12-col header-block-alignment"> 
+                       <span><strong>Top Evangelists</strong></span>
+                       <div class="mdl-layout-spacer"></div>
+                       <i class="material-icons">info_outline</i>
                       </div>
                     </div>
                     <div ng-repeat="x in top_pos_comments">
@@ -207,8 +216,10 @@
                   </div>
                   <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone  grey-border-right">
                     <div class="mdl-grid grey-bottom-border no-padding">
-                      <div class="mdl-cell mdl-cell--12-col"> 
-                        <p><strong>Top Critics</strong></p>
+                      <div class="mdl-cell mdl-cell--12-col header-block-alignment"> 
+                       <span><strong>Top Critics</strong></span>
+                       <div class="mdl-layout-spacer"></div>
+                       <i class="material-icons">info_outline</i>
                       </div>
                     </div>
                     <div ng-repeat="x in top_pos_comments">
@@ -230,8 +241,10 @@
                   </div>
                   <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone  grey-border-right">
                     <div class="mdl-grid grey-bottom-border no-padding">
-                      <div class="mdl-cell mdl-cell--12-col"> 
-                        <p><strong>Top Positive aspects</strong></p>
+                      <div class="mdl-cell mdl-cell--12-col header-block-alignment"> 
+                       <span><strong>Top Positive aspects</strong></span>
+                       <div class="mdl-layout-spacer"></div>
+                       <i class="material-icons">info_outline</i>
                       </div>
                     </div>
                     <div ng-repeat="x in top_pos_comments">
@@ -253,9 +266,10 @@
                   </div>
                   <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone  grey-border-right">
                     <div class="mdl-grid grey-bottom-border no-padding">
-                      <div class="mdl-cell mdl-cell--12-col"> 
-                        <p><strong>Top Negative Aspects</strong></p>
-                        <div class="mdl-layout-spacer"></div>
+                      <div class="mdl-cell mdl-cell--12-col header-block-alignment"> 
+                       <span><strong>Top Negative Aspects</strong></span>
+                       <div class="mdl-layout-spacer"></div>
+                       <i class="material-icons">info_outline</i>
                       </div>
                     </div>
                     <div ng-repeat="x in top_pos_comments">

@@ -88,12 +88,34 @@
                     </button>
                   </div>
                 </div>
-                <div class="mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col">
-                  
+                <div class="mdl-grid mdl-grid--no-spacing grey-border">
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone grey-border-right">
+                    <div class="mdl-grid grey-bottom-border no-padding ">
+                      <div class="mdl-cell mdl-cell--12-col header-block-alignment"> 
+                       <span><strong>Sentiments over time</strong></span>
+                       <div class="mdl-layout-spacer"></div>
+                       <i class="material-icons">info_outline</i>
+                      </div>
+                    </div>
+                    <div class="mdl-grid">
+                      <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
+                        <div id="curve_chart" style="width: 100%;"></div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="mdl-cell mdl-cell--6-col">
-                  
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+                    <div class="mdl-grid grey-bottom-border no-padding ">
+                      <div class="mdl-cell mdl-cell--12-col header-block-alignment"> 
+                       <span><strong>Source wise sentiments</strong></span>
+                       <div class="mdl-layout-spacer"></div>
+                       <i class="material-icons">info_outline</i>
+                      </div>
+                    </div>
+                    <div class="mdl-grid">
+                      <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
+                        <div id="dual_x_div" style="width: 100%;"></div>    
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="mdl-grid grey-border no-padding mdl-grid--no-spacing">
@@ -327,6 +349,7 @@
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script defer src="https://cdn.rawgit.com/CreativeIT/getmdl-select/master/getmdl-select.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="app.js"></script>
 </body>
 </html>

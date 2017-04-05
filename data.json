@@ -34,6 +34,10 @@
 					"count": 15
 				},
 				{
+					"time": "24-03",
+					"count": 10
+				},
+				{
 					"time": "25-03",
 					"count": 12
 				},
@@ -47,6 +51,10 @@
 			"facebook": {
 				"positive_count": 63,
 				"negative_count": 52
+			},
+			"twitter": {
+				"positive_count": 33,
+				"negative_count": 72
 			}
 		},
 		"top_likers": [
